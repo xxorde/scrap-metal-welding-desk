@@ -8,8 +8,8 @@ p_h=4;
 p_l=567;
 p_b=329;
 
-clear=2;
-dist=50;
+clear=1;
+dist=30;
 
 module mod() {
     // 1. bar

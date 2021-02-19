@@ -13,19 +13,19 @@ vkrs_l=325; // <p_b
 vkrs_b=60;
 
 overlap=50;
-clear=2;
+clear=1;
 dist=30;
 
 module mod() {
     // 1. bar
-    translate([vkr_b/2+clear,(p_l-vkr_l)/2,0]) {
+    translate([-(vkr_b/2)+clear,(p_l-vkr_l)/2,0]) {
         color( "Yellow", 1.0 ) {
             cube([vkr_b,vkr_l,vkr_h], 0);
         };
     };
     
     // 2. bar
-    translate([p_b-(vkr_b/2),(p_l-vkr_l)/2,0]) {
+    translate([p_b-(1.5*vkr_b),(p_l-vkr_l)/2,0]) {
         color( "Lime", 1.0 ) {
             cube([vkr_b,vkr_l,vkr_h], 0);
         };

@@ -9,25 +9,34 @@ p_l=567;
 p_b=329;
 
 clear=1;
-dist=30;
+dist=20;
 
 module mod() {
     // 1. bar
     color( "Olive", 1.0 ) {
-        cube([vkr_b,vkr_l,vkr_h], 0);
+        translate([0.5*vkr_b-clear,(p_l-vkr_l)/2]) {
+            cube([vkr_b,vkr_l,vkr_h], 0);
+        };
     };
 
     // 2. bar
-    translate([p_b-vkr_b,vkr_b+clear,0]) {
+    translate([p_b-vkr_b-0.5*clear,(p_l-vkr_l)/2,0]) {
         color( "Lime", 1.0 ) {
             cube([vkr_b,vkr_l,vkr_h], 0);
         };
     };
 
     // 2. bar
-    translate([0,p_l-vkr_b,0]) {
+    translate([0.5*vkr_b-clear,p_l/2+vkr_l/2+clear,0]) {
         color( "ForestGreen", 1.0 ) {
             cube([vkr_l,vkr_b,vkr_h], 0);
+        };
+    };
+    
+    // 4. bar
+    translate([0.5*vkr_b-clear*clear,(p_l-vkr_l)/2-vkr_b-clear,0]) {
+        color( "Red", 1.0 ) {
+            cube([vkr_l/2,vkr_b,vkr_h], 0);
         };
     };
 
