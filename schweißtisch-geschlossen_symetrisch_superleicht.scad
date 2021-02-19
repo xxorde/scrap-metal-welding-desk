@@ -14,10 +14,11 @@ dist=140;
 module mod() {
     // 1. bar
     color( "Olive", 1.0 ) {
-        translate([0.5*vkr_b,(p_l-vkr_l)/2]) {
-            cube([vkr_b,vkr_l,vkr_h], 0);
+        translate([0.5*vkr_b-clear,(p_l-vkr_l/2)/2]) {
+            cube([vkr_b,vkr_l/2,vkr_h], 0);
         };
     };
+
 
     // 2. bar
     translate([p_b-vkr_l/2+vkr_b,vkr_b,0]) {

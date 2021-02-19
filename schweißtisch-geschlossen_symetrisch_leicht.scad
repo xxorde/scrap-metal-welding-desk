@@ -32,6 +32,13 @@ module mod() {
         };
     };
 
+    // 4. bar
+    translate([p_b-vkr_l/2-vkr_b/2,vkr_b,0]) {
+        color( "Red", 1.0 ) {
+            cube([vkr_l/2,vkr_b,vkr_h], 0);
+        };
+    };
+
     // Plate
     translate([0,0,-p_h]) {
         cube([p_b,p_l,p_h], 0);
